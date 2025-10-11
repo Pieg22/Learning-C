@@ -5,10 +5,14 @@
 calcular la media de tres valores. Te han pedido que analices el problema. Realiza la tarea de análisis. */
 
 #include <cmath>
+#include <iostream>
 int main () {
-    int  3 ; 
-    int  4 ; 
-     
+    int number_one =  3 ; 
+    int number_two = 4 ; 
+    int number_three = 10 ;
+    double mean = number_one + number_two + number_three / 3.0 ;
+ return 0 ;
+ std::cout << mean ; 
 }
 
 
