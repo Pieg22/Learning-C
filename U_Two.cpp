@@ -15,12 +15,11 @@ int main () {
  std::cout << mean ; 
 }
 
-
-
-
 /*
 2. Diseña el algoritmo, en pseudocódigo o diagrama de flujo, que permita calcular
 la media en base al análisis del ejercicio anterior.
+
+
 3. Diseña e implementa un programa que calcule el área de un triángulo.
 4. Implementa un programa que, dado radio de una circunferencia, calcule su
 perímetro.
