@@ -19,7 +19,7 @@ int main () {       //Aquí empieza nuestro programa
     }
 
 
-    return 0 ; }  // Si todo va bien , el programa retorna 0 . De lo contrario reotrna a veces un -1 para indicar que a fallado el programa . 
+    return 0 ; }  // Si todo va bien , el programa retorna 0 . De lo contrario reotrna a veces un -1 para indicar que a fallado el programa . En el "output" podemos verlo 
 
 
 
