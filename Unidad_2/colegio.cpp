@@ -6,14 +6,14 @@ cuánto a otros gastos (el resto). */
 #include <iostream>
 #include <string>
 int main () {
-    double ingresos_e = 100 ;
-    double exchange_1 = ingresos_e * 1.16 ; 
-    double exchange_2 = ingresos_e * 94.58 ;
-    double teachers = (ingresos_e * 60) / 100 ;  //Dinero destinado al profesorado 
-    double instalations = (ingresos_e * 20) / 100 ; //Dinero destinado a las instalaciones 
-    double resto = (ingresos_e * 20) / 100 ; //Dinero destinado a otros gastos 
+    int ingresos_e = 100 ;
+    int exchange_1 = ingresos_e * 1.16 ; 
+    int exchange_2 = ingresos_e * 94.58 ;
+    int teachers = (ingresos_e * 60) / 100 ;  //Dinero destinado al profesorado 
+    int instalations = (ingresos_e * 20) / 100 ; //Dinero destinado a las instalaciones 
+    int resto = (ingresos_e * 20) / 100 ; //Dinero destinado a otros gastos 
     
-    std::cout << "El dinero destinado a los profesores asciende a : "<<teachers<< "\n"  "Quedando : "<<instalations<<" destinado a instalaciones " \n" Y "<<resto<<" para otros gastos "; 
+    std::cout << "El dinero destinado a los profesores asciende a : "<<teachers<< " euros , quedando  "<<instalations<<" euros destinado a instalaciones y "<<resto<<" euros  para otros gastos "; 
     
 
 
