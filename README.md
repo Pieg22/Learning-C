@@ -2,6 +2,7 @@ This repo is my begginig on C++
 I will take some notes here about the curiositys , fundamentals , all the stuf involved with this language . 
 
 What about all this terms of compilation ,  .cpp , .obj , .exe , .pdb , .ilk ? 
+We include all of them in .gitignore 
 
   '.cpp' is the file wich we create   
   '.obj' it is a intermediate file. The compilator (cl.exe for example ) traduce the code C++ a machine code , for CPU . 
