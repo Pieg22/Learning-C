@@ -1,1 +1,6 @@
-*hola.exe
+*.exe
+*.obj
+*.dll   
+*.pdb
+*.log   
+*.ilk
