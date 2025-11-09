@@ -37,10 +37,10 @@ int main () {
 
          if (n1 < n2){ // Sabiendo que n3 es el más pequeño comprobamos los otros dos values 
 
-            cout << "El orden es "<<n2<<","<<n1<<","<<n3<<"\n"; // El orden será n2,n1,n3 de menor a mayor 
+            cout << "El orden es "<<n3<<","<<n1<<","<<n2<<"\n"; // El orden será n2,n1,n3 de menor a mayor 
         }
         else {
-            cout << "El orden es "<<n2<<","<<n3<<","<<n1<<"\n"; // El orden será n2,n3,n1 
+            cout << "El orden es "<<n3<<","<<n2<<","<<n1<<"\n"; // El orden será n3
 
         } 
 
