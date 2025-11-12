@@ -17,6 +17,11 @@ int main (){
     if( n1 < n2) {
         cout << "El producto de los dos numeros es : " << n1 * n2 << "\n" ; 
     }
+    else if (n2 <= n1){
+        cout <<"La resta de los dos numeros es : "<< n2 - n1 << "\n" ; 
+
+    }
+
 
 return 0 ; 
 }

@@ -6,3 +6,8 @@
 *.ilk
 *.exe
 *.venv
+
+# Archivos compilados de Linux
+Unidad_3/Ejercicio_2
+Unidad_3/fibonacci
+Unidad_3/order_numbers
