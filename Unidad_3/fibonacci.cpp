@@ -11,14 +11,14 @@
     cout << "Introduce the amount of terms(93 max) : "<<"\n" ;  // Ask for the terms 
     cin >> terminos ; 
 
-    if (terminos > 93){
+    if (terminos > 93){   // This part we can do It better 
         cout<< "Please introduce a number below than 93 or the program will explote . " ;
-    }
+    } 
 
 
     cout << fib1 << fib2 ; 
 
-    while (contador < terminos){
+    while (contador < terminos){     // Actually we can do it with 'for' bucle , because we now about this program have max 93 runs.
         fib3 = fib1 + fib2;
         cout<< " " << fib3;
         fib1 = fib2 ; 
