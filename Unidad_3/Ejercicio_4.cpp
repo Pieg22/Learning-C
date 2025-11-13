@@ -12,7 +12,7 @@ int main () {
     cout << "Introduce 5 numeros , con un espacio entre ellos : " << "\n" ; 
     cin >> n1 >> n2 >> n3 >> n4 >> n5 ;  
     
-    if (n1 >= 0 && n1 <= 0) {
+    if (n1 >= 0) {
         
     }
     
