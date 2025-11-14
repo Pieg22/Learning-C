@@ -15,9 +15,9 @@ int main (){             // Aquí es donde empieza nuestro programa
 
     cout << "Los diez primeros productos de tu numero son : " << "\n";  // Creamos la impresion de la compresion aquí , para no liarla dentro del bucle for . 
 
-    for (int i = 1 ; i <= multiplicacion ; i++) {
-
-        cout << n1 <<  " x " << i << " = " << ( n1 * i) << "\n" ; 
+    for (int i = 1 ; i <= multiplicacion ; i++) {  // En el bucle estipulamos la variable "int i" con valor de 1 . Creamos la condición de i <= multiplicación , para que el bucle se ejecute
+                                                   // hasta que se deje de cumplir esta misma condición . A cada vuelta que hace el bucle le sumamos +1 a la variable "i". 
+        cout << n1 <<  " x " << i << " = " << ( n1 * i) << "\n" ; // Este es el print que vemos en la consola de la multiplicación junto con la operación que se lleva a cabo . 
 
     }
 
