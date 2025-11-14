@@ -15,80 +15,19 @@ int signVerification(float num){     //Creamos la función para la verificación
 }; 
 
 int main () {                     // Arrancamos con nuestra función principal del programa
-    float n1 , n2 , n3 , n4 , n5 ;  // Creamos nuestras variables de los 5 numeros , para más  tarde guardarlos . 
-
-    cout << "Introduce 5 numeros , con un espacio entre ellos : " << "\n" ;  // Pedimos al user los cinco numeros
-    cin >> n1 >> n2 >> n3 >> n4 >> n5 ;   // Guardamos esos cinco numeros en sus correspondientes variables 
-
-
-    /*A partir de aquí vamos a repetir el patron : 1. Variable + llamada a la función signverification . 2. Bloque if/else if / else para la comprobacion de cada numero . Lo único que cambia
-     es el numero que comprobamos */
-
-    int result_n1 = signVerification(n1); // Llamamos a la función partiendo de una nueva variable para analizar el n1 . 
-
-    if (result_n1 == 1){                  // Si el n1 es positivo se ejecuta 
-        cout << " El numero "<<n1<<" es positivo "<<"\n";
-    }
-    else if (result_n1 == 0){             // Si el n1 es 0 se corre esto 
-        cout << " El primer numero es  " <<n1<<"  "<<"\n";
-    }
-    else {                               // Si el n1 es negativo salta este else . 
-        cout << " El numero "<<n1<<" es negativo "<<"\n";
-    }
-
-
     
-    int result_n2 = signVerification(n2); 
 
-    if (result_n2 == 1){
-        cout << " El numero "<<n2<<" es positivo "<<"\n";
-    }
-    else if (result_n2 == 0){
-        cout << " El segundo numero es  " <<n2<<"  "<<"\n";
-    }
-    else { 
-        cout << " El numero "<<n2<<" es negativo "<<"\n";
-    }
-
+    for (int i = 0 ; i < 5 ; i++);
+          
+    float actual_number ; 
     
-    int result_n3 = signVerification(n3);  
+    cout << "Introduce el numero " <<  + 1 << " de 5: "<<endl;
+    cin >> actual_number; 
 
-    if (result_n3 == 1){
-        cout << " El numero "<<n3<<" es positivo "<<"\n";
-    }
-    else if (result_n3 == 0){
-        cout << " El tercer numero es  " <<n3<<"  "<<"\n";
-    }
-    else { 
-        cout << " El numero "<<n3<<" es negativo "<<"\n";
-    }
 
-    
-    int result_n4 = signVerification(n4);   // Comprobamos el 4 numero
 
-    if (result_n4 == 1){
-        cout << " El numero "<<n4<<" es positivo "<<"\n";
-    }
-    else if (result_n4 == 0){
-        cout << " El cuarto numero es  " <<n4<<"  "<<"\n";
-    }
-    else { 
-        cout << " El numero "<<n4<<" es negativo "<<"\n";
-    }
 
-    
-    int result_n5 = signVerification(n5);  //Comprobamos el quinto numero 
-
-    if (result_n5 == 1){
-        cout << " El numero "<<n5<<" es positivo "<<"\n";
-    }
-    else if (result_n5 == 0){
-        cout << " El quinto numero es  " <<n5<<"  "<<"\n";
-    }
-    else { 
-        cout << " El numero "<<n5<<" es negativo "<<"\n";
-    }
-
+  
 
 
 
