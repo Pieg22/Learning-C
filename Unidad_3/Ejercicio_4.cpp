@@ -17,27 +17,34 @@ int signVerification(float num){     //Creamos la función para la verificación
 int main () {                     // Arrancamos con nuestra función principal del programa
     
 
-    for (int i = 0 ; i < 5 ; i++);
-          
-    float actual_number ; 
+    for (int i = 0 ; i < 5 ; i++){ //Creamos nuestro bucle . Con la variable "i" = 0 ; Con la condición de que mientras i sea menor 
+                                   // que cinco , no pare el bucle ; i++ , en cada vuelta se le suma +1 a i . 
+    int actual_number ;            // Creamos la variable que utilizaremos más tarde para guardar los valores que introduce el user
     
-    cout << "Introduce el numero " <<  + 1 << " de 5: "<<endl;
-    cin >> actual_number; 
+    cout << "Introduce el numero " << i + 1 << " de 5: "<<endl; // Creamos el output para pedir los 5 digitos al user . De esta forma 
+                                                                // i + 1 , no tenemos que crear 5 variables . con una hacemos !!
+    cin >> actual_number;                                       // Guardamos los valores de i + 1 
+
+    int resultados = signVerification(actual_number) ;  // Guardamos los valores que nos devuelve la funcion en la nueva variable 
+
+    //A partir de aquí cojemos el resultado que nos devuelve la funcion y, que despues hemos guardado en la variable para imprimir 
+    // el resultado después de cada corrida del bucle . 
+    if (resultados == 1){                  
+        cout << " El numero "<<actual_number<<" es positivo "<<"\n";
+    }
+    else if (resultados == 0){             
+        cout << " El numero es  " <<actual_number<<"  "<<"\n";
+    }
+    else {                              
+        cout << " El numero "<<actual_number<<" es negativo "<<"\n";
+    }
 
 
-
-
-  
-
-
-
-
-
-
-
-
-   
     
+
+    
+
+    }
     return 0 ; 
 }
 
