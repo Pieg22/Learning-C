@@ -1,6 +1,7 @@
 #include <iostream> 
 using namespace std;
  
+const int ncoches = 2;
 int main (){         
  
     struct basedatos{
@@ -9,18 +10,22 @@ int main (){
         float precio;
     } ;    
  
-    basedatos miscoches;
-    cout<<"Introduce la marca"<<endl;
-    getline(cin >> ws, miscoches.marca);
+    basedatos miscoches[ncoches];
+    int registro;
+    for(int q = 0; q < ncoches; q++){
+      cout<<"Introduce la marca"<<endl;
+      getline(cin >> ws, miscoches[q].marca);
  
-    cout<<"Introduce el año"<<endl;    
-    cin >> miscoches.year;
-    cout<<"Introduce el precio"<<endl;    
-    cin >> miscoches.precio;
-    cout<<"Marca: "<<miscoches.marca<<endl;
-    cout<<"Año: "<<miscoches.year<<endl;
-    cout<<"Precio: "<<miscoches.precio<<endl;
-
+      cout<<"Introduce el año"<<endl;    
+      cin >> miscoches[q].year;
+      cout<<"Introduce el precio"<<endl;    
+      cin >> miscoches[q].precio;    
+    }
+    cout<<"Introduce el numero de registro para visualizar"<<endl;
+    cin >> registro;
+    cout<<"Marca: "<<miscoches[registro-1].marca<<endl;
+    cout<<"Año: "<<miscoches[registro-1].year<<endl;
+    cout<<"Precio: "<<miscoches[registro-1].precio<<endl;
     return 0 ; 
 }
  
