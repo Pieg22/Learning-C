@@ -6,7 +6,10 @@
 *.ilk
 *.exe
 *.venv
-
+#Ignore examples of clas
+ejemplos_clase
+pruebas
+pruebas.cpp
 # Archivos compilados de Linux
 Unidad_3/Ejercicio_2
 Unidad_3/fibonacci
