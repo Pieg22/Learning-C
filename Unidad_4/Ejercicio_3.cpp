@@ -5,7 +5,7 @@ etcétera.
 Utilizar un vector de enteros*/
 
 #include <iostream> // La libreria de confianza para sociabilizar con la consola 
-#include <vector> // Incluimos nueva libreria en nuestro diccionario ! 
+#include <vector> //  Los vectores nos permiten trabajar como con una lista dinamica , a diferencia de un array normal , el vector gestiona su propia memoria y conoce su tamaño . Su longitud es flexible y puede variar ! 
 using namespace std ;  // std::
 
 int main () { // Empieza nuestro programa
@@ -19,7 +19,7 @@ int main () { // Empieza nuestro programa
         cin >> elementos[i] ;    
     }
     for ( int k = 9 ; k >= 0 ; k--) cout << elementos[k] << endl ; // En este bucle , después de llenar nuestros cajones , simplemente con k-- , vamos a ir imprimiendo uno a uno el interior de nuestros cajones 
-    
+
 
     
 
