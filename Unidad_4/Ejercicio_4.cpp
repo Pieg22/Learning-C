@@ -14,7 +14,7 @@ const int nmax = 10 ;
 int main (){
     float matrix [nmax][nmax] ;
     int nuser ; 
-    bool diagonal = true , triangular = true ; 
+    bool diagonal = true  , triangular = true ; 
 
     cout << "Introduce el numero de filas de la matriz cuadrada (<10) : "<<endl;
     cin >> nuser;
@@ -30,12 +30,23 @@ int main (){
      for(int i = 0 ; i < nuser ; i++){
         for (int j = 0; j < nuser; j++)
         {
-         if (matrix[-i -1] != 0) triangular = false ; 
+         if (matrix[i][j] != matrix[j][i]) {diagonal = false ; } ; 
+
+         if ( i > j  && matrix[i][j] != 0 ) {triangular = false ; } ; 
 
 
         }
         
     }
+
+    if(diagonal == true ) cout << "La matriz es diagonal simetrica. " <<endl;
+    else cout << "La matriz no es diagonal simetrica . " <<endl;
+
+    if ( triangular == true ) cout << "La matriz es triangular superior " <<endl;
+    else cout << "La matriz no es triangular superior . " <<endl;
+
+
+
     return 0 ; 
  }
 
