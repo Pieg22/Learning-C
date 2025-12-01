@@ -14,7 +14,7 @@ const int nmax = 10 ;
 int main (){
     float matrix [nmax][nmax] ;
     int nuser ; 
-    bool diagonal = true ; 
+    bool diagonal = true , triangular = true ; 
 
     cout << "Introduce el numero de filas de la matriz cuadrada (<10) : "<<endl;
     cin >> nuser;
@@ -25,16 +25,17 @@ int main (){
          cout<< "Introduce el elemento i "<< i+1 << " y j " << j+1 <<endl; 
          cin >> matrix[i][j] ; 
         }
+        }
 
      for(int i = 0 ; i < nuser ; i++){
         for (int j = 0; j < nuser; j++)
         {
-         if (matrix[-i -1] != 0)
+         if (matrix[-i -1] != 0) triangular = false ; 
 
 
         }
         
     }
     return 0 ; 
-}
+ }
 
