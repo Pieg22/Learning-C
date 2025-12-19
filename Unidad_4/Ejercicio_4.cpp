@@ -46,13 +46,13 @@ int main (){
         
     }
 
-    if(diagonal == true ) cout << " La matriz es diagonal simetrica. " <<endl; // Comprobamos bandera diagonal 
+    if(diagonal) cout << " La matriz es diagonal simetrica. " <<endl; // Comprobamos bandera diagonal 
     else cout << "La matriz no es diagonal simetrica . " <<endl;
 
-    if ( triangular == true ) cout << " La matriz es triangular superior " <<endl; // comprobamos bandera triangular 
+    if ( triangular) cout << " La matriz es triangular superior " <<endl; // comprobamos bandera triangular 
     else cout << "La matriz no es triangular superior . " <<endl;
 
-    if( identidad == true ) cout << " La matriz si es identidad . "<<endl;
+    if( identidad) cout << " La matriz si es identidad . "<<endl;
     else cout<< "La matriz no es identidad."<<endl;
 
 

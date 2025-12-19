@@ -52,10 +52,10 @@ for (int i = 2 ; i < maxlibros  ; i++){ // Empezamos el bucle en i = 2 , ya que 
     cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
     cout << "Caracteristicas del libro : " << "\n" 
-            " - Titulo : " <<libros[registrer].title<< "\n" // registrer hace de int , para buscar el libro en la memoria 
-            " - Autor : " <<libros[registrer].writter<< "\n"
-            " - Año : " <<libros[registrer].year<< "\n"
-            " - Precio : " <<libros[registrer].precio<< endl; 
+            " - Titulo : " <<libros[registrer -1 ].title<< "\n" // registrer hace de int , para buscar el libro en la memoria 
+            " - Autor : " <<libros[registrer -1 ].writter<< "\n"
+            " - Año : " <<libros[registrer -1 ].year<< "\n"
+            " - Precio : " <<libros[registrer -1 ].precio<< endl; 
 
 
 
