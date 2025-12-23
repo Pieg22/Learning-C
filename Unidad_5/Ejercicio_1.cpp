@@ -7,6 +7,8 @@ using namespace std;
 
 const int N_numeros = 100 ; 
 
+
+
 int main (){
 
     int numeros[N_numeros] ; 
@@ -24,10 +26,7 @@ int main (){
 
     } 
 
-         
-
-    
-   
+    int resultado = Find_the_position(numeros,recogida) ; 
     
     return 0; 
 }
@@ -47,4 +46,4 @@ int Find_the_position (int numeros[], int tamanio){
     cout << "No se ha encontrado ningun 0." << endl;
     return -1; 
   
-} ; 
+} 
