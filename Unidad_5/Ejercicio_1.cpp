@@ -2,12 +2,10 @@
 posición del primer cero que encuentre en el vector.*/
 
 #include <iostream>
-
 using namespace std;
-
 const int N_numeros = 100 ; 
 
-
+int Find_the_position(int numeros[],int tamanio);
 
 int main (){
 
@@ -17,8 +15,6 @@ int main (){
     cout << "Cuantos numeros quieres introducir ? " <<endl ; 
     cin >> recogida ; 
 
-     
-    
     for ( int i = 0  ; recogida > i ; i++) {
         
         cout << " Introduce un numero por favor : " <<endl ; 
