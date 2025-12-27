@@ -10,7 +10,25 @@ using namespace std ;
 
 #define PI 3.141593 
 
+float modulo(float x,float y);
+float fase(float x,float y);
+
 int main (){
+    
+    float x, y, m, f , div , multi ; 
+
+    cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
+    cin >> x >> y; 
+
+    m = modulo(x,y);
+    f = fase(x,y);
+
+    cout << "Que operacion deseas realizar , multiplicacion o division ? Escribe 1 para multiplicacion , 2 para divison"<<endl;
+    
+
+
+
+
     return 0; 
 }
 
