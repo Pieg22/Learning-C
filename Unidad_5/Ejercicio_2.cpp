@@ -27,7 +27,7 @@ bool calculo(int n1, int n2){
 
    int result = n1 / n2 ; 
    cout << "El resultado de la division es " << result <<endl; 
-    if ( n1 % n2 == 0) true ;   
-    else false ; 
+    if ( n1 % n2 == 0) return true ;   
+    else  return false ; 
 
 }
