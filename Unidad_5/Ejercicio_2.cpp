@@ -8,11 +8,16 @@ int calculo(int n1, int n2) ;
 
 int main (){
     int n1 , n2 ; 
+    float result ; 
 
     cout << "Introduce dos numeros separados por un espacio para comprobar si son divisibles : "<<endl;
     cin >> n1 >> n2 ; 
 
-    cout<< "El resultado del calculo es : "<< n1 / n2 <<endl; 
+    result = n1 / n2 ; 
+
+
+
+    cout<< "El resultado del calculo es : "<< result <<endl; 
     
     int resultado = calculo (n1,n2);
 
