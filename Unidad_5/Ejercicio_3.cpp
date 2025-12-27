@@ -23,7 +23,7 @@ float fase (float x , float y){
     float angulo ; 
 
     if(y > 0) angulo = atan2(y,x) * 180.00/PI ; 
-    else angulo atan2(y,x) * 180.0/PI + 360.0 ; 
+    else angulo =  atan2(y,x) * 180.0/PI + 360.0 ; 
 
     return angulo ; 
 }
