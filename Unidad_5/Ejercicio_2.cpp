@@ -13,10 +13,6 @@ int main (){
     cout << "Introduce dos numeros separados por un espacio para comprobar si son divisibles : "<<endl;
     cin >> n1 >> n2 ; 
 
-    result = n1 / n2 ; 
-
-
-
     cout<< "El resultado del calculo es : "<< result <<endl; 
     
     int resultado = calculo (n1,n2);
@@ -26,6 +22,8 @@ int main (){
 
 int calculo(int n1, int n2){
 
-    if ( n1 % n2 == 0) return 0 ;  
+   float result = n1 / n2 ; 
+    if ( n1 % n2 == 0) return 0 ;   
+    else if ( n1 % n2 != 0) return -1 ; 
 
 }
