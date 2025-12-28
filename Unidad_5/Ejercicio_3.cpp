@@ -12,6 +12,8 @@ using namespace std ;
 
 float modulo(float x,float y);
 float fase(float x,float y);
+float multi_angulos (float f1, float f2);
+float multi_modulos (float m1, float m2);
 
 int main (){
     
@@ -44,7 +46,7 @@ int main (){
 
 
     return 0; 
-}
+}// Hasta aquí el main block 
 
 float modulo (float x,float y){
     
@@ -60,14 +62,17 @@ float fase (float x , float y){
     return angulo ; 
 }
 
-float multi_modulos (float m1, float m2){
-    float suma = f1 + f2 ; 
+float multi_modulos (float m1, float m2){ // Multiplicacion normal para los modulos 
 
-    if (suma >= 360) suma = suma -
-
-
+    float multiplicacion = m1 * m2 ; 
+    return multiplicacion ; 
 }
 
-float multi_angulos (float f1, float f2){
+float multi_angulos (float f1, float f2){ // los angulos se suman , pero no pueden pasar de 360 grados . 
+   float suma = f1 + f2 ; 
+
+    if (suma >= 360) suma = suma - 360 ;  // Ya que 360 es lo mismo que 0 , ya que la flecha esta apuntando directamente a la derecha tanto en 360 como 0 . 
     
+    return suma ; 
+
 }
