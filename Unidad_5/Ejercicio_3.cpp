@@ -14,6 +14,8 @@ float modulo(float x,float y);
 float fase(float x,float y);
 float multi_angulos (float f1, float f2);
 float multi_modulos (float m1, float m2);
+float div_modulos (float m1, float m2);
+float div_angulos(float f1, float f2);
 
 int main (){
     
@@ -45,7 +47,7 @@ int main (){
 
         cout << "El resultado de la multiplicacion es :  " <<resultado_modulos_multi<< " exp(i"<<resultado_angulos_multi<<")"<<endl; 
     }
-    else //la division va aquí 
+    else 
 
 
     return 0; 
@@ -79,10 +81,17 @@ float multi_angulos (float f1, float f2){ // los angulos se suman , pero no pued
     return suma ; 
 }
 
-float div_modulos (){
+float div_modulos (float m1, float m2){
+
+    float division = m1 / m2 ; 
+    return division ; 
 
 }
 
-float div_angulos(){
-    
+float div_angulos(float f1, float f2){
+
+    float resta = f1 - f2 ; 
+    if(resta <= 0) resta = resta + 360 ; 
+    return resta ; 
+
 }
