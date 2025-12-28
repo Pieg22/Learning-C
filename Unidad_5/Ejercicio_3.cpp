@@ -30,11 +30,13 @@ int main (){
     M = modulo(x,y);
     F = fase(x,y);
 
+    //cout << "Print m" <<m<< "print f " <<f<< "print M" <<M<< "print F" <<F<<endl;  // Test 
+
     cout << "Que operacion deseas realizar , multiplicacion o division ? Escribe 1 para multiplicacion , 2 para divison"<<endl;
     cin >> question ; 
 
     if (question == 1){
-        //la multi va aquí
+        
     }
     else //la div va aquí 
 
