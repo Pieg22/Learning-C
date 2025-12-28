@@ -77,5 +77,12 @@ float multi_angulos (float f1, float f2){ // los angulos se suman , pero no pued
     if (suma >= 360) suma = suma - 360 ;  // Ya que 360 es lo mismo que 0 , ya que la flecha esta apuntando directamente a la derecha tanto en 360 como 0 . 
     
     return suma ; 
+}
 
+float div_modulos (){
+
+}
+
+float div_angulos(){
+    
 }
