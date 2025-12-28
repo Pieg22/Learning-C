@@ -15,7 +15,7 @@ float fase(float x,float y);
 
 int main (){
     
-    float x, y, m, M, F, f , div , multi ; 
+    float x, y, m, M, F, f ; 
     int question ; 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
@@ -36,9 +36,11 @@ int main (){
     cin >> question ; 
 
     if (question == 1){
+        //aquí va la multiplicacion
+
         
     }
-    else //la div va aquí 
+    else //la division va aquí 
 
 
     return 0; 
@@ -56,4 +58,16 @@ float fase (float x , float y){
     else angulo =  atan2(y,x) * 180.0/PI + 360.0 ; 
 
     return angulo ; 
+}
+
+float multi_modulos (float m1, float m2){
+    float suma = f1 + f2 ; 
+
+    if (suma >= 360) suma = suma -
+
+
+}
+
+float multi_angulos (float f1, float f2){
+    
 }
