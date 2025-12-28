@@ -57,7 +57,7 @@ int main (){
 
 
     return 0; 
-}// Hasta aquí el main block 
+}// Hasta aquí el main block --------------------------------------------------------------------------------------------------------------------------------------
 
 float modulo (float x,float y){
     
@@ -100,4 +100,12 @@ float div_angulos(float f1, float f2){
     if(resta < 0) resta = resta + 360 ; 
     return resta ; 
 
+}
+
+float cartesiana_x(float r , float angulo){
+
+}
+
+float cartesiana_y(float r , float angulo){
+    
 }
