@@ -21,7 +21,7 @@ int main (){
     
     float x, y, m, M, F, f ; 
     int question ; 
-    float resultado_angulos_multi , resultado_modulos_multi; 
+    float resultado_angulos_multi , resultado_modulos_multi, resultados_modulos_division, resultado_angulos_division; 
     
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
@@ -47,7 +47,13 @@ int main (){
 
         cout << "El resultado de la multiplicacion es :  " <<resultado_modulos_multi<< " exp(i"<<resultado_angulos_multi<<")"<<endl; 
     }
-    else 
+    else {
+        resultados_modulos_division = div_modulos(m,M);
+        resultado_angulos_division = div_angulos(f,F);
+
+        cout << "El resultado de la division es :  " <<resultados_modulos_division<< " exp(i"<<resultado_angulos_division<<")"<<endl;
+
+    }
 
 
     return 0; 
@@ -91,7 +97,7 @@ float div_modulos (float m1, float m2){
 float div_angulos(float f1, float f2){
 
     float resta = f1 - f2 ; 
-    if(resta <= 0) resta = resta + 360 ; 
+    if(resta < 0) resta = resta + 360 ; 
     return resta ; 
 
 }
