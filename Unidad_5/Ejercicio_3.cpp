@@ -15,7 +15,7 @@ float fase(float x,float y);
 
 int main (){
     
-    float x, y, m, f , div , multi ; 
+    float x, y, m, M, F, f , div , multi ; 
     int question ; 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
@@ -24,6 +24,12 @@ int main (){
     m = modulo(x,y);
     f = fase(x,y);
 
+    cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
+    cin >> x >> y; 
+
+    M = modulo(x,y);
+    F = fase(x,y);
+
     cout << "Que operacion deseas realizar , multiplicacion o division ? Escribe 1 para multiplicacion , 2 para divison"<<endl;
     cin >> question ; 
 
@@ -31,11 +37,6 @@ int main (){
         //la multi va aquí
     }
     else //la div va aquí 
-
-    
-
-
-
 
 
     return 0; 
