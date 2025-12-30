@@ -6,13 +6,20 @@ using namespace std;
 bool calculo(int, int) ; 
 
 int main (){
-    int n , ; 
+    int n , n2 ; 
     bool primo  = true , comprobacion  ; 
 
     cout << "Introduce un numero a continuacion : "<<endl; 
     cin >> n ; 
 
-    comprobacion = calculo(n);
+    comprobacion = calculo(n,n2);
+
+    for(int i = 2 ; i < n ; i++) {
+        
+    }
+
+
+
 
     
 
