@@ -24,8 +24,8 @@ int main (){
         if (comprobacion == true ) primo = false ;// los numeros primos nunca tendrán un resto de 0 a no ser que sean 1 o el mismo .
     
     } 
-    if( primo == true) cout << " El numero "<< n << "es primo" ; 
-    else cout << " El numero "<< n << "no es primo" ;
+    if( primo == true) cout << " El numero "<< n << " es primo" ; 
+    else cout << " El numero "<< n << " no es primo" ;
 
 
     return 0 ; 
