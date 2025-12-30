@@ -17,18 +17,15 @@ int main (){
         cout << " El " << n << " no es primo "<<endl;
      }
 
-
-   for(int i = 2 ; i < n ; i++) { // empezamos en  2 ya que 0 y 1 no nos ayuda para comprobar si es primo o no 
+    for(int i = 2 ; i < n ; i++) { // empezamos en  2 ya que 0 y 1 no nos ayuda para comprobar si es primo o no 
 
         comprobacion = calculo(n,i); // cuando la comprobación sea true querra decir que el resto es 0 
 
         if (comprobacion == true ) primo = false ;// los numeros primos nunca tendrán un resto de 0 a no ser que sean 1 o el mismo .
-
-        return 
     
     } 
-
-    cout << ""
+    if( primo == true) cout << " El numero "<< n << "es primo" ; 
+    else cout << " El numero "<< n << "no es primo" ;
 
 
     return 0 ; 
