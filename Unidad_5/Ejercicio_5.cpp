@@ -18,7 +18,11 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
 
 //añadimos variables aquí para poder acceder a ellas en las funciones , ya que si estan dentro del main block las funciones no las detectan 
 int contador = 2 ; 
+
 //A partir de aquí iran los prototipos de las funciones . 
+void nuevo_libro (database libros[max_libros],int contador) ; 
+void show_con_numero(database libros[max_libros], int contador ) ;
+void show_con_nombre(database libros[max_libros],int contador) ;
 
 
 
@@ -34,7 +38,9 @@ do {
         cout << "\n--- NUEVA VUELTA ---" << endl;
         
         // Llamamos a las funciones
-        //show_con_nombre(libros, contador);
+        show_con_nombre(libros, contador);
+        show_con_numero(libros,contador);
+        nuevo_libro(libros,contador);
         
 
         // --- ZONA DE CONTROL ---
