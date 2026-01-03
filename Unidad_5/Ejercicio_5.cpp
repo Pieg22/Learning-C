@@ -21,7 +21,7 @@ int contador = 2 ;
 
 //A partir de aquí iran los prototipos de las funciones . 
 void nuevo_libro (database libros[max_libros],int contador) ; 
-void show_con_numero() ;
+void show_con_numero() ; // He tenido que quitar los argumentos de toda la funcion , ya que no estaba funcionando bien , porque el contador se me ponía a 0 a cada vuelta de nuevo 
 void show_con_nombre(database libros[max_libros],int contador) ;
 
 
@@ -117,6 +117,12 @@ void show_con_nombre(database libros[max_libros],int contador){
      bool encontrado = false ; // flag para determinar si hemos encontrado el libro o no
 
      for( int i = 0 ; i < contador ; i++ ){
+
+        // --- CÓDIGO ESPÍA (Bórralo cuando lo arregles) ---
+    cout << "DEBUG: Busco -> '" << registrer << "'" << endl;
+    cout << "DEBUG: Comparo con -> '" << libros[i].writer << "'" << endl;
+    cout << "----------------" << endl;
+    // ------------------------------------------------
 
      if(registrer == libros[i].writer) {
 
