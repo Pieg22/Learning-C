@@ -118,12 +118,6 @@ void show_con_nombre(database libros[max_libros],int contador){
 
      for( int i = 0 ; i < contador ; i++ ){
 
-        // --- CÓDIGO ESPÍA (Bórralo cuando lo arregles) ---
-    cout << "DEBUG: Busco -> '" << registrer << "'" << endl;
-    cout << "DEBUG: Comparo con -> '" << libros[i].writer << "'" << endl;
-    cout << "----------------" << endl;
-    // ------------------------------------------------
-
      if(registrer == libros[i].writer) {
 
      cout << "Caracteristicas del libro : " << "\n" 
@@ -136,6 +130,8 @@ void show_con_nombre(database libros[max_libros],int contador){
          }
          
     } 
+    contador ++ ; 
+    
      if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
 }
 
