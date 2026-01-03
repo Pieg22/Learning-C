@@ -20,7 +20,7 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
 int contador = 2 ; 
 
 //A partir de aquí iran los prototipos de las funciones . 
-void nuevo_libro (database libros[max_libros],int contador) ; 
+void nuevo_libro () ; // 
 void show_con_numero() ; // He tenido que quitar los argumentos de toda la funcion , ya que no estaba funcionando bien , porque el contador se me ponía a 0 a cada vuelta de nuevo 
 void show_con_nombre(database libros[max_libros],int contador) ;
 
@@ -55,7 +55,7 @@ do {
 
         if (opcion == 1) show_con_numero();
         else if (opcion == 2) show_con_nombre(libros, contador);
-        else nuevo_libro(libros,contador); 
+        else nuevo_libro(); 
         
         // Imprimimos la opción de si el user quiere seguir o parar el programa 
         cout << "Si quieres salir, escribe: 'quiero terminar con el programa'" << endl;
@@ -67,7 +67,7 @@ do {
     return 0; 
 }
 
-void nuevo_libro (database libros[max_libros],int contador){
+void nuevo_libro (){
  
     cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
     getline(cin >> ws, libros[contador].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
@@ -129,9 +129,7 @@ void show_con_nombre(database libros[max_libros],int contador){
     encontrado = true ; // green flag , sucess 
          }
          
-    } 
-    contador ++ ; 
-    
+    }  
      if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
 }
 
