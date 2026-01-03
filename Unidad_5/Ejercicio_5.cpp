@@ -75,10 +75,8 @@ void nuevo_libro (database libros[max_libros],int contador){
             " - Autor : " <<libros[registrer].writer<< "\n"
             " - Año : " <<libros[registrer].year<< "\n"
             " - Precio : " <<libros[registrer].precio<< endl; 
-
-          
          }
-     else cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
+     else cout << "No se a encontrado ningun libro con ese numero de registro."<<endl ; 
          
     } 
     
