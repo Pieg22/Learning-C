@@ -29,17 +29,23 @@ void show_con_nombre(database libros[max_libros],int contador) ;
 
 
 int main (){
-    //variables + what we can put in while () ? 
-string comando ; 
+    //variables
+string comando ; //Variable para utilizar el comando para parar el programa 
+int opcion ; 
 
     
 do {
-    // --- ZONA DE TRABAJO ---
-        cout << "\n--- NUEVA VUELTA ---" << endl;
-        
+    
+        cout << "Elije una opcion , ver libro por referencia numerica(1) o por nombre de autor(2) , crear un nuevo libro(3) , escribe solamente el numero respectivamente de la opción." << endl;
+        cin >> opcion ; 
+
+        if (opcion == 1) show_con_numero(libros,contador);
+        else if (opcion == 2) show_con_nombre(libros, contador);
+        else nuevo_libro(libros,contador); 
+
         // Llamamos a las funciones
-        show_con_nombre(libros, contador);
-        show_con_numero(libros,contador);
+        //show_con_nombre(libros, contador);
+        //show_con_numero(libros,contador);
         nuevo_libro(libros,contador);
         
 
