@@ -17,8 +17,6 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
     }libros[max_libros] ;  // Algo muy importante en este caso con las estructuras es necesario poner ; después del } , si no se rompe todo !
 //A partir de aquí iran los prototipos de las funciones . 
 
-void show_con_numero(int registrer);
-void nuevo_libro (string);
 
 
 
@@ -34,7 +32,7 @@ do {
         cout << "\n--- NUEVA VUELTA ---" << endl;
         
         // Llamamos a las funciones
-        show_con_nombre(libros, contador);
+        //show_con_nombre(libros, contador);
         
 
         // --- ZONA DE CONTROL ---
@@ -47,9 +45,9 @@ do {
     return 0; 
 }
 
-void nuevo_libro (string){
- for (int i = 2 ; i < max_libros  ; i++){ // Empezamos el bucle en i = 2 , ya que 0 y 1 ya estan ocupados en la memoria por los dos libros pre establecidos , mantenemos el bucle con un max de maxlibros (100)
-    cout << "Introduce el titulo del libro  (o escribe 'fin' para saltar al registro): " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
+void nuevo_libro (database libros[max_libros],int contador){
+ for (int i = 2 ; i < contador  ; i++){ // Empezamos el bucle en i = 2 , ya que 0 y 1 ya estan ocupados en la memoria por los dos libros pre establecidos , mantenemos el bucle con un max de maxlibros (100)
+    cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
     getline(cin >> ws, libros[i].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
 
     if(libros[i].title == "fin") break ; // Con este if , creamos la acción de salir del bucle , si el user escribe "fin"
@@ -63,18 +61,31 @@ void nuevo_libro (string){
     cout << "Que precio tiene el tomo ? " <<endl;
     cin >> libros[i].precio ;  // almacenamos el precio float
     
+ }
+}
 
-};
+ void show_con_numero(database libros[max_libros], int contador ){
+    int registrer ; 
+     bool encontrado = false ; // flag para determinar si hemos encontrado el libro o no
 
- void show_con_numero(int registrer){
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
-    cout << "Caracteristicas del libro : " << "\n" 
-            " - Titulo : " <<libros[registrer -1 ].title<< "\n" // registrer hace de int , para buscar el libro en la memoria 
-            " - Autor : " <<libros[registrer -1 ].writer<< "\n"
-            " - Año : " <<libros[registrer -1 ].year<< "\n"
-            " - Precio : " <<libros[registrer -1 ].precio<< endl; 
+     for( int i = 0 ; i < contador ; i++ ){
+
+     if(registrer == libros[i].writer) {
+
+     cout << "Caracteristicas del libro : " << "\n" 
+            " - Titulo : " <<libros[i].title<< "\n" 
+            " - Autor : " <<libros[i].writer<< "\n"
+            " - Año : " <<libros[i].year<< "\n"
+            " - Precio : " <<libros[i].precio<< endl; 
+
+         encontrado = true ; // green flag , sucess 
+         }
+         
+    } 
+     if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
 
 }
 
