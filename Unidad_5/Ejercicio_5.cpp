@@ -41,7 +41,7 @@ int opcion ;
     libros[0].year = 1605;
     libros[0].precio = 20.50;
 
-    // Libro 1
+// Libro 1
     libros[1].title = "Alan turing";
     libros[1].writer = "Nikolas Tesla";
     libros[1].year = 1967;
@@ -56,18 +56,12 @@ do {
         if (opcion == 1) show_con_numero(libros,contador);
         else if (opcion == 2) show_con_nombre(libros, contador);
         else nuevo_libro(libros,contador); 
-
-        // Llamamos a las funciones
-        //show_con_nombre(libros, contador);
-        //show_con_numero(libros,contador);
-        //nuevo_libro(libros,contador);
         
-
         // Imprimimos la opción de si el user quiere seguir o parar el programa 
         cout << "Si quieres salir, escribe: 'quiero terminar con el programa'" << endl;
         cout << "Si quieres seguir, pulsa Enter o escribe cualquier otra cosa." << endl;
         getline(cin >> ws ,comando) ; 
-        // ??? (HUECO 2: ¿Cómo leemos una frase entera con espacios?)
+    
 
  }while(comando != "quiero terminar con el programa");
     return 0; 
