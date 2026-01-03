@@ -33,6 +33,20 @@ int main (){
 string comando ; //Variable para utilizar el comando para parar el programa 
 int opcion ; 
 
+//Libros pre-cargados , teniendo la variable global , podemos cargarlos donde queramos . 
+
+// Libro 0
+    libros[0].title = "Dune";
+    libros[0].writer = "Albert";
+    libros[0].year = 1605;
+    libros[0].precio = 20.50;
+
+    // Libro 1
+    libros[1].title = "Alan turing";
+    libros[1].writer = "Nikolas Tesla";
+    libros[1].year = 1967;
+    libros[1].precio = 18.90;
+
     
 do {
     
