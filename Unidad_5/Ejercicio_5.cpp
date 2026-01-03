@@ -9,15 +9,18 @@ using namespace std ;
 
 const int max_libros = 100 ; // Constante para determinar la cantidad de huecos en la estanteria 
 
-int main (){
-    //variables + what we can put in while () ? 
-
-      struct database {  // nombramos nuestra estructura de datos  para guardar la informacion sobre los libros
+struct database {  // nombramos nuestra estructura de datos  para guardar la informacion sobre los libros
         string title ;  // declaramos una variable string para el titulo
         string writter ;  // variable autor 
         int year ;  // variable de enteros para  el año
         float precio ; //  variable con decimales para el precio
     }libros[max_libros] ;  // Algo muy importante en este caso con las estructuras es necesario poner ; después del } , si no se rompe todo !
+//A partir de aquí iran los prototipos de las funciones . 
+
+int main (){
+    //variables + what we can put in while () ? 
+string comando ; 
+database liros ; 
     
     
 
