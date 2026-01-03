@@ -52,7 +52,7 @@ do {
         // Imprimimos la opción de si el user quiere seguir o parar el programa 
         cout << "Si quieres salir, escribe: 'quiero terminar con el programa'" << endl;
         cout << "Si quieres seguir, pulsa Enter o escribe cualquier otra cosa." << endl;
-        cin >> ws ,comando ; 
+        getline(cin >> ws ,comando) ; 
         // ??? (HUECO 2: ¿Cómo leemos una frase entera con espacios?)
 
  }while(comando != "quiero terminar con el programa");
