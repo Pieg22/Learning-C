@@ -69,7 +69,7 @@ void nuevo_libro (database libros[max_libros],int contador){
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
-     for( int i = 0 ; i < contador ; i++ ){
+     
 
      if(registrer == contador) {
 
@@ -81,11 +81,12 @@ void nuevo_libro (database libros[max_libros],int contador){
 
          encontrado = true ; // green flag , sucess 
          }
+     if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
          
     } 
-     if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
+    
 
-}
+
 
 void show_con_nombre(database libros[max_libros],int contador){
     string registrer ; 
