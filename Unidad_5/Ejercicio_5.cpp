@@ -53,7 +53,7 @@ do {
         cout << "Elije una opcion , ver libro por referencia numerica(1) o por nombre de autor(2) , crear un nuevo libro(3) , escribe solamente el numero respectivamente de la opción." << endl;
         cin >> opcion ; 
 
-        if (opcion == 1) show_con_numero(libros,contador);
+        if (opcion == 1) show_con_numero();
         else if (opcion == 2) show_con_nombre(libros, contador);
         else nuevo_libro(libros,contador); 
         
@@ -88,7 +88,7 @@ void nuevo_libro (database libros[max_libros],int contador){
  }
 
 
- void show_con_numero(database libros[max_libros], int contador ){
+ void show_con_numero( ){
      int registrer ; 
 
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
