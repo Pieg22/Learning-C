@@ -21,7 +21,7 @@ int contador = 2 ;
 
 //A partir de aquí iran los prototipos de las funciones . 
 void nuevo_libro (database libros[max_libros],int contador) ; 
-void show_con_numero(database libros[max_libros], int contador ) ;
+void show_con_numero() ;
 void show_con_nombre(database libros[max_libros],int contador) ;
 
 
@@ -92,7 +92,7 @@ void nuevo_libro (database libros[max_libros],int contador){
      int registrer ; 
 
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
-     cin >> contador ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
+     cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
      if(registrer >= 0 && registrer < contador) { // el numero dado debe ser mayor o igual a 0 y menor que el total de libros 
 
