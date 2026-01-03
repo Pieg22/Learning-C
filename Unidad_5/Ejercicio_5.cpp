@@ -11,7 +11,7 @@ const int max_libros = 100 ; // Constante para determinar la cantidad de huecos 
 
 struct database {  // nombramos nuestra estructura de datos  para guardar la informacion sobre los libros
         string title ;  // declaramos una variable string para el titulo
-        string writter ;  // variable autor 
+        string writer ;  // variable autor 
         int year ;  // variable de enteros para  el año
         float precio ; //  variable con decimales para el precio
     }libros[max_libros] ;  // Algo muy importante en este caso con las estructuras es necesario poner ; después del } , si no se rompe todo !
@@ -19,20 +19,22 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
 
 void show_con_numero(int registrer);
 void nuevo_libro (string);
-void show_con_nombre(string registrer);
+
 
 
 
 int main (){
     //variables + what we can put in while () ? 
+int contador = 2 ; 
 string comando ; 
-database liros ; 
+database libros[max_libros] ; 
     
 do {
     // --- ZONA DE TRABAJO ---
         cout << "\n--- NUEVA VUELTA ---" << endl;
         
         // Llamamos a las funciones
+        show_con_nombre(libros, contador);
         
 
         // --- ZONA DE CONTROL ---
@@ -53,7 +55,7 @@ void nuevo_libro (string){
     if(libros[i].title == "fin") break ; // Con este if , creamos la acción de salir del bucle , si el user escribe "fin"
 
     cout << "Quien es el escritor/ra ? " <<endl;
-    getline(cin >> ws, libros[i].writter); // Almacenamos el nombre del/la autor/ra
+    getline(cin >> ws, libros[i].writer); // Almacenamos el nombre del/la autor/ra
 
     cout << "De que año es el libro ? " <<endl; 
     cin >> libros[i].year ;  // almacenamos el año int
@@ -64,34 +66,39 @@ void nuevo_libro (string){
 
 };
 
- void show_con_numero(int registrer);{
+ void show_con_numero(int registrer){
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
     cout << "Caracteristicas del libro : " << "\n" 
             " - Titulo : " <<libros[registrer -1 ].title<< "\n" // registrer hace de int , para buscar el libro en la memoria 
-            " - Autor : " <<libros[registrer -1 ].writter<< "\n"
+            " - Autor : " <<libros[registrer -1 ].writer<< "\n"
             " - Año : " <<libros[registrer -1 ].year<< "\n"
             " - Precio : " <<libros[registrer -1 ].precio<< endl; 
 
 }
 
-void show_con_nombre(database libros[max_libros],int total_ocupados ,string registrer);{
+void show_con_nombre(database libros[max_libros],int contador){
+    string registrer ; 
      cout << "Introduce el nombre del autor/a para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      getline(cin >> ws, registrer ); // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
      bool encontrado = false ; // flag para determinar si hemos encontrado el libro o no
 
-     for( int i = 0 ; i < max_libros ; i++ ){
+     for( int i = 0 ; i < contador ; i++ ){
 
-     if(registrer == libros[i].writter) {
+     if(registrer == libros[i].writer) {
 
      cout << "Caracteristicas del libro : " << "\n" 
-            " - Titulo : " <<libros[i].title<< "\n" // registrer hace de int , para buscar el libro en la memoria 
-            " - Autor : " <<libros[i].writter<< "\n"
+            " - Titulo : " <<libros[i].title<< "\n" 
+            " - Autor : " <<libros[i].writer<< "\n"
             " - Año : " <<libros[i].year<< "\n"
             " - Precio : " <<libros[i].precio<< endl; 
+
+    encontrado = true ; // green flag , sucess 
          }
+         
     } 
+     if (encontrado == false) cout << "No se a encontrado ningun libro con ese nombre."<<endl ; 
 }
 
