@@ -58,6 +58,8 @@ void nuevo_libro (database libros[max_libros],int contador){
 
     cout << "Que precio tiene el tomo ? " <<endl;
     cin >> libros[contador].precio ;  // almacenamos el precio float
+
+    contador ++ ; 
     
  }
 
