@@ -27,7 +27,7 @@ int contador = 2 ;
 int main (){
     //variables + what we can put in while () ? 
 string comando ; 
-database libros[max_libros] ; 
+
     
 do {
     // --- ZONA DE TRABAJO ---
@@ -47,7 +47,7 @@ do {
     return 0; 
 }
 
-void nuevo_libro (database libros[max_libros],int& contador){
+void nuevo_libro (database libros[max_libros],int contador){
  
     cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
     getline(cin >> ws, libros[contador].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
@@ -62,6 +62,8 @@ void nuevo_libro (database libros[max_libros],int& contador){
     cin >> libros[contador].precio ;  // almacenamos el precio float
 
     contador ++ ; 
+
+    cout << "Total de libros : "<< contador <<endl;
     
  }
 
