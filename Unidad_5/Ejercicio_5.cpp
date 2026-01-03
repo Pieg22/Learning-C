@@ -46,21 +46,21 @@ do {
 }
 
 void nuevo_libro (database libros[max_libros],int contador){
- for (int i = 1 ; i < contador  ; i++){ // Empezamos el bucle en i = 2 , ya que 0 y 1 ya estan ocupados en la memoria por los dos libros pre establecidos , mantenemos el bucle con un max de maxlibros (100)
+ 
     cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
-    getline(cin >> ws, libros[i].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
+    getline(cin >> ws, libros[contador].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
 
     cout << "Quien es el escritor/ra ? " <<endl;
-    getline(cin >> ws, libros[i].writer); // Almacenamos el nombre del/la autor/ra
+    getline(cin >> ws, libros[contador].writer); // Almacenamos el nombre del/la autor/ra
 
     cout << "De que año es el libro ? " <<endl; 
-    cin >> libros[i].year ;  // almacenamos el año int
+    cin >> libros[contador].year ;  // almacenamos el año int
 
     cout << "Que precio tiene el tomo ? " <<endl;
-    cin >> libros[i].precio ;  // almacenamos el precio float
+    cin >> libros[contador].precio ;  // almacenamos el precio float
     
  }
-}
+
 
  void show_con_numero(database libros[max_libros], int contador ){
      int registrer ; 
