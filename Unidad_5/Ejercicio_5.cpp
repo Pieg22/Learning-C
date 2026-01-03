@@ -15,6 +15,9 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
         int year ;  // variable de enteros para  el año
         float precio ; //  variable con decimales para el precio
     }libros[max_libros] ;  // Algo muy importante en este caso con las estructuras es necesario poner ; después del } , si no se rompe todo !
+
+//añadimos variables aquí para poder acceder a ellas en las funciones , ya que si estan dentro del main block las funciones no las detectan 
+int contador = 2 ; 
 //A partir de aquí iran los prototipos de las funciones . 
 
 
@@ -23,7 +26,6 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
 
 int main (){
     //variables + what we can put in while () ? 
-int contador = 2 ; 
 string comando ; 
 database libros[max_libros] ; 
     
@@ -45,7 +47,7 @@ do {
     return 0; 
 }
 
-void nuevo_libro (database libros[max_libros],int contador){
+void nuevo_libro (database libros[max_libros],int& contador){
  
     cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
     getline(cin >> ws, libros[contador].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
