@@ -50,8 +50,6 @@ void nuevo_libro (database libros[max_libros],int contador){
     cout << "Introduce el titulo del libro : " <<endl;  // Pedimos al user el titulo del libro o pasar al registro 
     getline(cin >> ws, libros[i].title) ; // guardamos el valor que introduce el user para ver si segimos con la lectura de un nuevo lirbo o saltamos 
 
-    if(libros[i].title == "fin") break ; // Con este if , creamos la acción de salir del bucle , si el user escribe "fin"
-
     cout << "Quien es el escritor/ra ? " <<endl;
     getline(cin >> ws, libros[i].writer); // Almacenamos el nombre del/la autor/ra
 
@@ -65,7 +63,7 @@ void nuevo_libro (database libros[max_libros],int contador){
 }
 
  void show_con_numero(database libros[max_libros], int contador ){
-    int registrer ; 
+     int registrer ; 
      bool encontrado = false ; // flag para determinar si hemos encontrado el libro o no
 
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
@@ -73,7 +71,7 @@ void nuevo_libro (database libros[max_libros],int contador){
 
      for( int i = 0 ; i < contador ; i++ ){
 
-     if(registrer == libros[i].writer) {
+     if(registrer == contador) {
 
      cout << "Caracteristicas del libro : " << "\n" 
             " - Titulo : " <<libros[i].title<< "\n" 
