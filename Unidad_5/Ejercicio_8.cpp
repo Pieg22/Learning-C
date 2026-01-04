@@ -9,7 +9,7 @@ Los programas de los ejercicios 7 y 8 hacen lo mismo, pero uno usa una función 
 using namespace std ; 
 
 //prototipo
-int lectura_inversa(int numero,int contador);
+int lectura_inversa(int numero);
 
 int main (){
     //variable numero_dado_por_user
@@ -29,4 +29,5 @@ int lectura_inversa(int numero){
 
         cout << " el numero en orden inverso es : " << i << endl ; 
     }
+    return 0; 
 }
