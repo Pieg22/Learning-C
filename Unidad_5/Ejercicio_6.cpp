@@ -19,8 +19,10 @@ int  libreria_numeros[cantidad] ;
 cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
 cin >> ws , libreria_numeros ; 
+
+cout << libreria_numeros << endl; 
 //get array and slide it betwen fuction
-int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
+ // if (libreria_numeros > 0 )int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
 
 
     return 0; 
@@ -35,18 +37,9 @@ int buscador_de_zero(int libreria_numeros[cantidad], int contador ){
         if(buscador == libreria_numeros[i] ) {
 
             cout << "la posicion del ultimo zero es : " << libreria_numeros[i] << endl ; 
-
-            return 0 ; 
         
         } 
-
-        
-
-        
-
     }
-
-
-
+ return 0 ; 
 }
 
