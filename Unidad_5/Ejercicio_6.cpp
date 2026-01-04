@@ -18,9 +18,12 @@ int  libreria_numeros[cantidad] , total_numeros ;
 //prints
 cout << "Cuantos numeros vas a introducir ? "<<endl;
 cin >> total_numeros ; 
-cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
-for (int i = 0 ; i < total_numeros; i++) cin >> libreria_numeros[i] ; 
+for (int i = 0 ; i < total_numeros; i++) {
+
+    cout << "Escribe un numero " << endl ; 
+    cin >> libreria_numeros[i]  ; 
+}
 
 cout << libreria_numeros << endl; 
 //get array and slide it betwen fuction
@@ -38,7 +41,7 @@ int buscador_de_zero(int libreria_numeros[cantidad], int contador ){
 
         if(buscador == libreria_numeros[i] ) {
 
-            cout << "la posicion del ultimo zero es : " << libreria_numeros[i] << endl ; 
+            cout << "la posicion del ultimo zero es : " << i << endl ; //Imprimimos solo  i para que nos diga la posicion , si imprimimos  libreria_numeros[i] nos dice 0 solamente . 
         
         } 
     }
