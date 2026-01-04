@@ -9,7 +9,7 @@ using namespace std ;
 const int cantidad  = 100 ; // constante para la funcion y para el array
 
 //prototypes below 
-int buscador_de_zero(int libreria_numeros[], int contador) ; 
+int buscador_de_zero(int libreria_numeros[], int contador) ; // prototipo de la funcion indicando los ints los corchetes y el nombre 
 
 int main (){
 //variables 
@@ -19,30 +19,30 @@ int  libreria_numeros[cantidad] , total_numeros ;
 cout << "Cuantos numeros vas a introducir ? "<<endl;
 cin >> total_numeros ; 
 //save numbers
-for (int i = 0 ; i < total_numeros; i++) {
+for (int i = 0 ; i < total_numeros; i++) { // añadimos y preguntamos uno por uno los numeros que pone el user , en referncia con total_numeros
 
     cout << "Escribe un numero " << endl ; 
     cin >> libreria_numeros[i]  ; 
 }
 //get array and slide it betwen fuction
-buscador_de_zero( libreria_numeros, total_numeros ) ;  // LLamada a la función 
+buscador_de_zero( libreria_numeros, total_numeros ) ;  // LLamada a la función con los argumentos que utilizamps dentro del main . Ya que no podemos pasarle los mismos que sus originales ofc. 
 
 
     return 0; 
 }
 
 //fuction 
-int buscador_de_zero(int libreria_numeros[], int contador ){
-    int buscador = 0 ; 
+int buscador_de_zero(int libreria_numeros[], int contador ){ // argumentos de array que nos de el user con sus numeros y contador para trabajar con el bucle 
+    int buscador = 0 ;  // variable para crear una comparacion en la condicion 
     
-    for ( int i = contador -1 ; i >= 0 ; i--){ 
+    for ( int i = contador -1 ; i >= 0 ; i--){  // bucle inverso , para empezar a buscar desde el final hasta el principio de la lista 
 
-        if(buscador == libreria_numeros[i] ) {
+        if(buscador == libreria_numeros[i] ) { // entra el if cuando encuentra el numero 0 que buscamos 
 
             cout << "la posicion del ultimo zero es : " << ( i + 1) << endl ; //Imprimimos solo  i para que nos diga la posicion , si imprimimos  libreria_numeros[i] nos dice 0 solamente .  
                                                           // i + 1 para que cuente como los humanos . 
         } 
     }
- return 0 ; 
+ return 0 ; // le devolvemos a la funcion su prometido int si todo a salido bien . El premio 
 }
 
