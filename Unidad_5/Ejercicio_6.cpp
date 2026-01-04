@@ -9,6 +9,7 @@ using namespace std ;
 const int cantidad  = 100 ; // constante para la funcion y para el array
 
 //prototypes below 
+int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
 
 int main (){
 //variables 
@@ -19,6 +20,7 @@ cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de 
 //save numbers
 cin >> ws , libreria_numeros ; 
 //get array and slide it betwen fuction
+int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
 
 
     return 0; 
