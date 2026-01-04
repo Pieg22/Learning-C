@@ -9,20 +9,20 @@ using namespace std ;
 const int cantidad  = 100 ; // constante para la funcion y para el array
 
 //prototypes below 
-int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
+int buscador_de_zero(int libreria_numeros[cantidad], int ) ; 
 
 int main (){
 //variables 
-int  libreria_numeros[cantidad] ; 
+int  libreria_numeros[cantidad] , total_numeros ; 
 
 //prints
 cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
-cin >> ws , libreria_numeros[] ; 
+for (int i = 0 ; i < total_numeros; i++) cin >> libreria_numeros[i] ; 
 
 cout << libreria_numeros << endl; 
 //get array and slide it betwen fuction
- // if (libreria_numeros > 0 )int buscador_de_zero(int libreria_numeros[cantidad], int contador ) ; 
+int buscador_de_zero(int libreria_numeros[cantidad], int total_numeros ) ; 
 
 
     return 0; 
