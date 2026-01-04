@@ -15,8 +15,9 @@ int main (){
 int  libreria_numeros[cantidad] ; 
 
 //prints
+cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
-
+cin >> ws , libreria_numeros ; 
 //get array and slide it betwen fuction
 
 
@@ -24,7 +25,16 @@ int  libreria_numeros[cantidad] ;
 }
 
 //fuction 
-int buscador_de_zero(int,int){
+int buscador_de_zero(int libreria_numeros[cantidad], int contador ){
+    int buscador; 
+    
+    for ( int i = contador -1 ; i >= 0 ; i--){ 
+
+        
+
+    }
+
+
 
 }
 
