@@ -16,6 +16,8 @@ int main (){
 int  libreria_numeros[cantidad] , total_numeros ; 
 
 //prints
+cout << "Cuantos numeros vas a introducir ? "<<endl;
+cin >> total_numeros ; 
 cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
 for (int i = 0 ; i < total_numeros; i++) cin >> libreria_numeros[i] ; 
