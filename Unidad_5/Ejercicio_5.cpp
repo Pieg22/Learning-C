@@ -20,7 +20,7 @@ struct database {  // nombramos nuestra estructura de datos  para guardar la inf
 int contador = 2 ; 
 
 //A partir de aquí iran los prototipos de las funciones . 
-void nuevo_libro () ; // 
+void nuevo_libro () ; // Esta también he tenido que quitar los argumentos porque se explotaba 
 void show_con_numero() ; // He tenido que quitar los argumentos de toda la funcion , ya que no estaba funcionando bien , porque el contador se me ponía a 0 a cada vuelta de nuevo 
 void show_con_nombre(database libros[max_libros],int contador) ;
 
@@ -31,7 +31,7 @@ void show_con_nombre(database libros[max_libros],int contador) ;
 int main (){
     //variables
 string comando ; //Variable para utilizar el comando para parar el programa 
-int opcion ; 
+int opcion ; // Esta la utilizaremos para determinar en que opcion quiere acceder el user 
 
 //Libros pre-cargados , teniendo la variable global , podemos cargarlos donde queramos . 
 
@@ -81,7 +81,7 @@ void nuevo_libro (){
     cout << "Que precio tiene el tomo ? " <<endl;
     cin >> libros[contador].precio ;  // almacenamos el precio float
 
-    contador ++ ; 
+    contador ++ ; // Cada libro que guardamos se suma uno en el database (struct)
 
     cout << "Total de libros : "<< contador <<endl;
     
@@ -94,7 +94,7 @@ void nuevo_libro (){
      cout << "Introduce el numero de registro para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      cin >> registrer ; // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
-     if(registrer >= 0 && registrer < contador) { // el numero dado debe ser mayor o igual a 0 y menor que el total de libros 
+     if(registrer >= 0 && registrer < contador) { // el numero dado debe ser mayor o igual a 0 y menor que el total de libros , esto es como el pase se seguridad . 
 
      cout << "Caracteristicas del libro : " << "\n" 
             " - Titulo : " <<libros[registrer].title<< "\n" 
@@ -110,7 +110,9 @@ void nuevo_libro (){
 
 
 void show_con_nombre(database libros[max_libros],int contador){
-    string registrer ; 
+
+    string registrer ; // Utilizamos esta variable para guardar el nombre escrito por el user , y compararlo en el database para así encontrar el autor . 
+
      cout << "Introduce el nombre del autor/a para encontrar el libro : " <<endl; // Pedimos al user el numero de registro en la memoria a la cual quiere acceder , si una prestablecida o una que haya creado recientemente
      getline(cin >> ws, registrer ); // guardamos el valor de la pregunta anterior , para recoger el nº de registro y imprimir en consola la info del libro deseado 
 
@@ -118,7 +120,7 @@ void show_con_nombre(database libros[max_libros],int contador){
 
      for( int i = 0 ; i < contador ; i++ ){
 
-     if(registrer == libros[i].writer) {
+     if(registrer == libros[i].writer) { // string == string , si es el mismo nombre , no importa el orden , con el primero que se encuentre es el que va a imprimir 
 
      cout << "Caracteristicas del libro : " << "\n" 
             " - Titulo : " <<libros[i].title<< "\n" 
