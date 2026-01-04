@@ -26,13 +26,14 @@ void lectura_inversa(int numero){
     //bucle inverso y variable para el bucle 
     cout << "El numero al reves es: "; 
 
-    while(numero > 0) {
-        int ultima_cifra = numero % 10 ;
+    while(numero > 0) { // corre el bucle mientras queden numeros enteros difernetes de 0 
 
-        cout << ultima_cifra ; 
+        int ultima_cifra = numero % 10 ; // el resto de dividir entre 10 de un int siempre da la última cifra 
 
-        numero = numero / 10 ; 
-    }
+        cout << ultima_cifra ;  // imprimimos el numero que tenemos recien calculado en ese momento 
+
+        numero = numero / 10 ; // nos quitamos de encima el decimal  que proviene del resto 
+    } //  llegamos aquí con un numero menos , pero si aún queda alguno de la cifra larga , volvemos arriba y vamos por el siguiente 
  
-    cout << endl ;  
+    cout << endl ;  // salto de linea cuando no se cumple la condicion del bucle 
 }
