@@ -18,7 +18,7 @@ int  libreria_numeros[cantidad] ;
 //prints
 cout << "Introduce  los numeros a continuacion con un espacio entre cada uno de ellos  : "<<endl;
 //save numbers
-cin >> ws , libreria_numeros ; 
+cin >> ws , libreria_numeros[] ; 
 
 cout << libreria_numeros << endl; 
 //get array and slide it betwen fuction
