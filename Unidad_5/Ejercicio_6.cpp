@@ -26,9 +26,19 @@ cin >> ws , libreria_numeros ;
 
 //fuction 
 int buscador_de_zero(int libreria_numeros[cantidad], int contador ){
-    int buscador; 
+    int buscador = 0 ; 
     
     for ( int i = contador -1 ; i >= 0 ; i--){ 
+
+        if(buscador == libreria_numeros[i] ) {
+
+            cout << "la posicion del ultimo zero es : " << libreria_numeros[i] << endl ; 
+
+            return 0 ; 
+        
+        } 
+
+        
 
         
 
