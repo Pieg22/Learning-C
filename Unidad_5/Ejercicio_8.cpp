@@ -9,7 +9,7 @@ Los programas de los ejercicios 7 y 8 hacen lo mismo, pero uno usa una función 
 using namespace std ; 
 
 //prototipo
-int lectura_inversa(int numero);
+void lectura_inversa(int numero);
 
 int main (){
     //variable numero_dado_por_user
@@ -22,12 +22,17 @@ int main (){
     return 0 ; 
 }
 
-int lectura_inversa(int numero){
+void lectura_inversa(int numero){
     //bucle inverso y variable para el bucle 
-    int contador ; 
-    for(int i = contador -1 ; i >= 0 ; i--){
+    cout << "El numero al reves es: "; 
 
-        cout << " el numero en orden inverso es : " << i << endl ; 
+    while(numero > 0) {
+        int ultima_cifra = numero % 10 ;
+
+        cout << ultima_cifra ; 
+
+        numero = numero / 10 ; 
     }
-    return 0; 
+ 
+    cout << endl ;  
 }
