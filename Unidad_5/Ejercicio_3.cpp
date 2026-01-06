@@ -8,8 +8,9 @@ formato polar.*/
 #include <cmath>
 using namespace std ; 
 
-#define PI 3.141593 
+#define PI 3.141593 // valor de pi 
 
+//prototipos de las funciones 
 float modulo(float x,float y);
 float fase(float x,float y);
 float multi_angulos (float f1, float f2);
@@ -19,16 +20,16 @@ float div_angulos(float f1, float f2);
 
 int main (){
     
-    float x, y, m, M, F, f ; 
-    int question ; 
-    float resultado_angulos_multi , resultado_modulos_multi, resultados_modulos_division, resultado_angulos_division; 
+    float x, y, m, M, F, f ; // Variables float que utilizaremos para guardar y calcular 
+    int question ; // Variable int que la utilizamos para llevar a cabo la elección del programa que se desea 
+    float resultado_angulos_multi , resultado_modulos_multi, resultados_modulos_division, resultado_angulos_division; // variables para sustituir su valor mas tarde por el calculo final de las funciones
     
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
-    cin >> x >> y; 
-
-    m = modulo(x,y);
-    f = fase(x,y);
+    cin >> x >> y; // guardamos x y y , dos numeros reales 
+    // modulo = a la longitud del vector que representa el n complejo .  fase =  es el angulo , el argumento . 
+    m = modulo(x,y); // calculamos el modulo y lo guardamos en esta variable 
+    f = fase(x,y); // calculamos 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
     cin >> x >> y; 
@@ -102,10 +103,11 @@ float div_angulos(float f1, float f2){
 
 }
 
-float cartesiana_x(float r , float angulo){
-
+float cartesiana_x(float r , float angulo){ // calculamos el x (real)
+    return r*cos(angulo);
 }
 
-float cartesiana_y(float r , float angulo){
+float cartesiana_y(float r , float angulo){// calculamos el y ( imaginario)
+    return r*sin(angulo) ; 
     
 }
