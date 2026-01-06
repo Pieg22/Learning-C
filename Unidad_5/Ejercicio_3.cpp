@@ -27,7 +27,7 @@ int main (){
     float x, y, m, M, F, f ; // Variables float que utilizaremos para guardar y calcular 
     int question ; // Variable int que la utilizamos para llevar a cabo la elección del programa que se desea 
     float resultado_angulos_multi , resultado_modulos_multi, resultados_modulos_division, resultado_angulos_division; // variables para sustituir su valor mas tarde por el calculo final de las funciones
-    
+    float resultado_cartensiano_x , resultado_cartesiano_y ; 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
     cin >> x >> y; // guardamos x y y , dos numeros reales 
@@ -46,11 +46,15 @@ int main (){
     cout << "Que operacion deseas realizar , multiplicacion o division ? Escribe 1 para multiplicacion , 2 para divison"<<endl;
     cin >> question ; 
 
+    
+
     if (question == 1){
         resultado_modulos_multi =  multi_modulos(m,M);
         resultado_angulos_multi =  multi_angulos(f,F);
+        resultado_cartensiano_x = cartesiana_x(resultado_modulos_multi, resultado_angulos_multi) ; 
 
-        cout << "El resultado de la multiplicacion es :  " <<resultado_modulos_multi<< " exp(i"<<resultado_angulos_multi<<")"<<endl; 
+        cout << "El resultado de la multiplicacion es :  " <<resultado_modulos_multi<< " exp(i"<<resultado_angulos_multi<<")"<<"\n"; 
+        cout << "Y su formato cartesiano (rectangular) es : " << << " " ; 
     }
     else {
         resultados_modulos_division = div_modulos(m,M);
