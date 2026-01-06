@@ -60,7 +60,7 @@ int main (){
     else {
         resultados_modulos_division = div_modulos(m,M);
         resultado_angulos_division = div_angulos(f,F);
-         resultado_cartensiano_x = cartesiana_x(resultados_modulos_division, resultado_angulos_division) ; 
+        resultado_cartensiano_x = cartesiana_x(resultados_modulos_division, resultado_angulos_division) ; 
         resultado_cartesiano_y = cartesiana_y(resultados_modulos_division,resultado_angulos_division); 
 
 
