@@ -17,6 +17,9 @@ float multi_angulos (float f1, float f2);
 float multi_modulos (float m1, float m2);
 float div_modulos (float m1, float m2);
 float div_angulos(float f1, float f2);
+float cartesiana_x(float r , float angulo);
+float cartesiana_y(float r , float angulo); 
+
 
 int main (){
     
