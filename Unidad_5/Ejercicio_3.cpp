@@ -3,6 +3,7 @@ ello, se utilizará su forma polar. El usuario introducirá los números en form
 cartesiana y después introducirá la operación a realizar (multiplicación o
 división). El programa mostrará la solución tanto en formato cartesiano como en
 formato polar.*/
+// X = es la parte real , yi = la parte imaginaria por que va multiplicado por i . 
  
 #include <iostream>
 #include <cmath>
@@ -32,7 +33,7 @@ int main (){
     cin >> x >> y; // guardamos x y y , dos numeros reales 
     // modulo = a la longitud del vector que representa el n complejo .  fase =  es el angulo , el argumento . 
     m = modulo(x,y); // calculamos el modulo y lo guardamos en esta variable 
-    f = fase(x,y); // calculamos 
+    f = fase(x,y); // calculamos el angulo 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
     cin >> x >> y; 
@@ -65,14 +66,14 @@ int main (){
 
 float modulo (float x,float y){
     
-    return sqrt(x*x + y*y);
+    return sqrt(x*x + y*y); // calculamos con el teorema de pitagoras  x^2 + y^2 . 
 }
 
 float fase (float x , float y){
     float angulo ; 
 
-    if(y > 0) angulo = atan2(y,x) * 180.00/PI ; 
-    else angulo =  atan2(y,x) * 180.0/PI + 360.0 ; 
+    if(y > 0) angulo = atan2(y,x) * 180.00/PI ;  //atan(y,x) = y/x , arc(resultado) , nos devuelve el angulo en radianes , por eso le añadimos el calculo  de *  180/PI  , para tenerlo en grados . 
+    else angulo =  atan2(y,x) * 180.0/PI + 360.0 ; // Es lo mismo que lo anterior , pero añadiendole 360 grados  
 
     return angulo ; 
 }
@@ -107,10 +108,10 @@ float div_angulos(float f1, float f2){
 }
 
 float cartesiana_x(float r , float angulo){ // calculamos el x (real)
-    return r*cos(angulo);
+    return r*cos(angulo* PI / 180); // Convertimos el ángulo a radianes dentro del cos , calculamos el coseno y multiplicamos por el radio 
 }
 
 float cartesiana_y(float r , float angulo){// calculamos el y ( imaginario)
-    return r*sin(angulo) ; 
+    return r*sin(angulo * PI / 180) ;  // Convertiamos el ángulo a radianes dentro del sin , calculamos el sin y multiplicamos por el radio . 
     
 }
