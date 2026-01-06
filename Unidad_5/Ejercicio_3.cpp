@@ -52,15 +52,20 @@ int main (){
         resultado_modulos_multi =  multi_modulos(m,M);
         resultado_angulos_multi =  multi_angulos(f,F);
         resultado_cartensiano_x = cartesiana_x(resultado_modulos_multi, resultado_angulos_multi) ; 
+        resultado_cartesiano_y = cartesiana_y(resultado_modulos_multi,resultado_angulos_multi); 
 
         cout << "El resultado de la multiplicacion es :  " <<resultado_modulos_multi<< " exp(i"<<resultado_angulos_multi<<")"<<"\n"; 
-        cout << "Y su formato cartesiano (rectangular) es : " << << " " ; 
+        cout << "Y su formato cartesiano (rectangular) es : " << resultado_cartensiano_x<< "  + "<< resultado_cartesiano_y << "i" <<endl; 
     }
     else {
         resultados_modulos_division = div_modulos(m,M);
         resultado_angulos_division = div_angulos(f,F);
+         resultado_cartensiano_x = cartesiana_x(resultados_modulos_division, resultado_angulos_division) ; 
+        resultado_cartesiano_y = cartesiana_y(resultados_modulos_division,resultado_angulos_division); 
 
-        cout << "El resultado de la division es :  " <<resultados_modulos_division<< " exp(i"<<resultado_angulos_division<<")"<<endl;
+
+        cout << "El resultado de la division es :  " <<resultados_modulos_division<< " exp(i"<<resultado_angulos_division<<")"<<"\n";
+        cout << "Y su formato cartesiano (rectangular) es : " << resultado_cartensiano_x<< "  + "<< resultado_cartesiano_y << "i" <<endl; 
 
     }
 
