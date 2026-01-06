@@ -27,7 +27,7 @@ int main (){
     float x, y, m, M, F, f ; // Variables float que utilizaremos para guardar y calcular 
     int question ; // Variable int que la utilizamos para llevar a cabo la elección del programa que se desea 
     float resultado_angulos_multi , resultado_modulos_multi, resultados_modulos_division, resultado_angulos_division; // variables para sustituir su valor mas tarde por el calculo final de las funciones
-    float resultado_cartensiano_x , resultado_cartesiano_y ; 
+    float resultado_cartensiano_x , resultado_cartesiano_y ; // Nuevas varaibles para la impresion de los resultados en cartesianos 
 
     cout << "Itroduce un numero complejo en cartesianas de la siguiente forma : x espacio y . "<<endl;
     cin >> x >> y; // guardamos x y y , dos numeros reales 
@@ -46,10 +46,10 @@ int main (){
     cout << "Que operacion deseas realizar , multiplicacion o division ? Escribe 1 para multiplicacion , 2 para divison"<<endl;
     cin >> question ; 
 
-    
+    // En las condiciones de abajo , hacemos trabajar a nuestras funciones en cada caso . 
 
     if (question == 1){
-        resultado_modulos_multi =  multi_modulos(m,M);
+        resultado_modulos_multi =  multi_modulos(m,M); 
         resultado_angulos_multi =  multi_angulos(f,F);
         resultado_cartensiano_x = cartesiana_x(resultado_modulos_multi, resultado_angulos_multi) ; 
         resultado_cartesiano_y = cartesiana_y(resultado_modulos_multi,resultado_angulos_multi); 
@@ -101,14 +101,15 @@ float multi_angulos (float f1, float f2){ // los angulos se suman , pero no pued
     return suma ; 
 }
 
-float div_modulos (float m1, float m2){
+float div_modulos (float m1, float m2){ // en esta funcion realizamos una division de los modulos m M 
 
     float division = m1 / m2 ; 
     return division ; 
 
 }
 
-float div_angulos(float f1, float f2){
+float div_angulos(float f1, float f2){ // aquí realizamos la resta de los angulos y seguidamente , creamos la condición para graduar los grados del resultado , ya que 
+    // 0  = 360 , y si por lo que sea se nos quedan en negativos esos grados , provocamos que el resultado nos salga positivo , siempre en un rango de 0 a 360  grados . 
 
     float resta = f1 - f2 ; 
     if(resta < 0) resta = resta + 360 ; 
