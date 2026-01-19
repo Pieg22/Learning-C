@@ -7,6 +7,9 @@ Para cada alumno, se debe guardar el nombre, el DNI y la nota media. (creando un
 3. Realiza una función que cargue los datos de los alumnos de un fichero de texto.
 La estructura del fichero debe ser la misma que la utilizada en la función pedida
 en el punto 2. (acceder al fichero "falumnos.txt")
+
+Para que estos funcionen , tenemos que crear los ficheros y sustituirlos por los que hay implementados ahora en las funciones , si no fallará o no ? 
+
 */
 
 
@@ -29,6 +32,7 @@ void introducirAlumno(Alumnos, int &);
 void guardarAlumnos(Alumnos, int);
 int cargarAlumnos(Alumnos);
 void mostrarAlumnos(Alumnos, int);
+void editaralumno (Alumnos alumnos,int & tam) ; 
 
 int main ()
 {
@@ -53,6 +57,8 @@ int main ()
             case 1: 
                 introducirAlumno(alumnos, tam);
                 break;
+            case 2 : 
+                editaralumno(alumnos,tam);
             case 3:
                 mostrarAlumnos(alumnos, tam);
                 break;
@@ -137,3 +143,27 @@ void mostrarAlumnos(Alumnos alumnos, int tam)
         cout << "Expediente: " << alumnos[i].media << endl;
     }
 }
+
+/*1. Realiza una función que permita editar los datos de un alumno que ya se
+encuentra en el vector. ( Es decir en la memoria ) 
+*/
+
+void editaralumno (Alumnos alumnos,int & tam) {
+    int dni ;   
+
+        cout << "Introduce el dni del alumno : " <<endl; // preguntamos por el dni del alumno que queremos editar 
+        cin >> dni ;  // guardamos dni buscado 
+
+    for (int i = 0 ; i < tam ; i++){
+        
+         if (alumnos[i].dni == dni ) { // teniendo el dni que buscamos los comparamos con los que tenemos hasta encontrarlo 
+            cout << "Nuevo nombre : "<<endl ; // modificamos los datos del usuario , dejando el mismo dni claro . s
+            getline (cin >> ws , alumnos[i].nombre);
+            cout << "Nueva media : " <<endl; 
+            cin >> ws , alumnos[i].media ;    
+    }
+   }
+  }
+       
+
+
